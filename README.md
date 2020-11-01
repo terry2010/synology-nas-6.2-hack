@@ -26,3 +26,23 @@ vim /etc/crontab
 synoservice -restart crond
 ```
 
+### 增加ipkg 支持（替代yum/apt）
+套件中心添加源
+```
+http://www.cphub.net/
+```
+安装套件 
+```
+perl
+Easy Bootstrap Installer
+iPKGui
+```
+安装完毕后，登陆nas，在 /etc/profile 最后一行增加
+```
+export PATH="$PATH:/opt/bin"
+```
+之后就可以用  
+
+ipkg list |grep golang 搜索包
+
+ipkg install screen 安装包
