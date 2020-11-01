@@ -1,8 +1,8 @@
 # 使用方式:
 
-          php index.php path=\"/volumeUSB1/usbshare/你的目录\"
+          php index.php path=/volumeUSB1/usbshare/你的目录
           
-          php index.php order=namelengthdesc path=\"/volumeUSB1/usbshare/你的目录\"
+          php index.php order=namelengthdesc path="/volumeUSB1/usbshare/你的目录"
           
            usb路径一般为 
            
