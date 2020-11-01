@@ -20,4 +20,9 @@
 
 去golang 官网， 按照教程正常安装即可， export的环境变量需要写到/etc/profile 里才能生效
 
+### 修改cron
+```
+vim /etc/crontab
+synoservice -restart crond
+```
 
