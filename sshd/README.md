@@ -17,3 +17,8 @@ UsePrivilegeSeparation no
 ```
 
 最后这项修改会降低ssh的安全性。 如果需要更安全的方式，网上有修改内容
+
+在所有操作做完之后， 使用命令重启sshd服务
+```
+synoservice -restart ssh-shell
+```
