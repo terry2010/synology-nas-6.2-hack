@@ -6,3 +6,8 @@
 ### sshd
 
 将sshd替换为centos-release-7-6.1810.2.el7.centos.x86_64 上的相同版本sshd， 使其支持sftp
+
+
+### nas-file-list
+
+列出某个目录下所有文件大小的php脚本。 需要在群晖上开启ssh登陆， 并登陆到群晖以后，在命令行下执行
