@@ -16,6 +16,10 @@
 
 将文件拷入/usr/bin/ 即可使用 rz 和sz 命令
 
+### telnet
+
+将文件拷入/usr/bin/ 即可使用 telnet 命令
+
 ### 使用golang
 
 去golang 官网， 按照教程正常安装即可， export的环境变量需要写到/etc/profile 里才能生效
