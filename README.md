@@ -76,3 +76,7 @@ pip3 uninstall runlike
 
 2. 增加 --privileged=true   （在创建界面里选择高权限没用）
 
+yum install NetworkManager  NetworkManager-tui
+ systemctl start NetworkManager  
+ nmcli c add type bridge ifname docker0 con-name docker0
+
