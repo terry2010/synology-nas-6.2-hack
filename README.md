@@ -63,7 +63,9 @@ pip3 uninstall runlike
 ```
 查看安装路径， 把安装路径增加到 /etc/profile里面
 
-用docker启动的centos镜像， 如果想用systemctl等工具， 需要把启动参数结尾的
+用docker启动的centos镜像， 如果想用systemctl等工具， 需要
+
+1. 把启动参数结尾的
 ```
 /bin/bash
 ```
@@ -71,4 +73,6 @@ pip3 uninstall runlike
 ```
  /usr/sbin/init
 ```
+
+2. 增加 --privileged=true   （在创建界面里选择高权限没用）
 
