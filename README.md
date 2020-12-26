@@ -50,3 +50,15 @@ export PATH="$PATH:/opt/bin"
 ipkg list |grep golang 搜索包
 
 ipkg install screen 安装包
+
+### 查看docker 启动参数
+```
+ipkg install py3-pip
+pip3 install --upgrade pip
+pip3 install runlike
+```
+此刻可能出现找不到pip命令和runlike命令的情况。使用 
+```
+pip3 uninstall runlike
+```
+查看安装路径， 把安装路径增加到 /etc/profile里面
