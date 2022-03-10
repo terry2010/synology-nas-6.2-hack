@@ -1,4 +1,5 @@
 <?php
+//查找重复文件
 $dir = "/volume1/book";
 
 ini_set("memory_limit","2G");
