@@ -79,4 +79,47 @@ pip3 uninstall runlike
 yum install NetworkManager  NetworkManager-tui
  systemctl start NetworkManager  
  nmcli c add type bridge ifname docker0 con-name docker0
+ 
+ ### 安装 youtube-dl
+ > 首先要安装python
+ 
+```
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+```
 
+使用方式： 
+
+查看分辨率：
+```
+youtube-dl --proxy 192.168.50.181:7890 -F https://www.youtube.com/watch?v=xxxxxxxxx
+
+[youtube] xxxxx: Downloading webpage
+[info] Available formats for eBD8Cz6IJRg:
+format code  extension  resolution note
+249          webm       audio only tiny   50k , webm_dash container, opus @ 50k (48000Hz), 152.11MiB
+250          webm       audio only tiny   64k , webm_dash container, opus @ 64k (48000Hz), 193.78MiB
+251          webm       audio only tiny  125k , webm_dash container, opus @125k (48000Hz), 375.61MiB
+140          m4a        audio only tiny  129k , m4a_dash container, mp4a.40.2@129k (44100Hz), 388.96MiB
+160          mp4        256x144    144p   75k , mp4_dash container, avc1.4d400c@  75k, 30fps, video only, 227.84MiB
+278          webm       256x144    144p   78k , webm_dash container, vp9@  78k, 30fps, video only, 235.08MiB
+242          webm       426x240    240p  141k , webm_dash container, vp9@ 141k, 30fps, video only, 424.65MiB
+133          mp4        426x240    240p  172k , mp4_dash container, avc1.4d4015@ 172k, 30fps, video only, 518.50MiB
+243          webm       640x360    360p  264k , webm_dash container, vp9@ 264k, 30fps, video only, 795.31MiB
+134          mp4        640x360    360p  343k , mp4_dash container, avc1.4d401e@ 343k, 30fps, video only, 1.01GiB
+244          webm       854x480    480p  468k , webm_dash container, vp9@ 468k, 30fps, video only, 1.38GiB
+135          mp4        854x480    480p  651k , mp4_dash container, avc1.4d401f@ 651k, 30fps, video only, 1.91GiB
+247          webm       1280x720   720p 1010k , webm_dash container, vp9@1010k, 30fps, video only, 2.96GiB
+136          mp4        1280x720   720p 1286k , mp4_dash container, avc1.64001f@1286k, 30fps, video only, 3.77GiB
+248          webm       1920x1080  1080p 1713k , webm_dash container, vp9@1713k, 30fps, video only, 5.03GiB
+137          mp4        1920x1080  1080p 2568k , mp4_dash container, avc1.640028@2568k, 30fps, video only, 7.54GiB
+271          webm       2560x1440  1440p 5973k , webm_dash container, vp9@5973k, 30fps, video only, 17.53GiB
+313          webm       3840x2160  2160p 12277k , webm_dash container, vp9@12277k, 30fps, video only, 36.02GiB
+18           mp4        640x360    360p  423k , avc1.42001E, 30fps, mp4a.40.2 (44100Hz), 1.24GiB
+22           mp4        1280x720   720p 1414k , avc1.64001F, 30fps, mp4a.40.2 (44100Hz) (best)
+```
+
+下载需要的分辨率
+```
+youtube-dl --proxy 192.168.50.181:7890 -f 137 https://www.youtube.com/watch?v=xxxxxxxx
+```
