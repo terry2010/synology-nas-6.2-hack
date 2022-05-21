@@ -123,3 +123,8 @@ format code  extension  resolution note
 ```
 youtube-dl --proxy 192.168.50.181:7890 -f 137 https://www.youtube.com/watch?v=xxxxxxxx
 ```
+
+使用aria2 
+```
+ youtube-dl --proxy 192.168.50.181:7890  --external-downloader aria2c --external-downloader-args "--all-proxy=http://192.168.50.181:7890  --file-allocation=prealloc -s -j 16 -x 16 -k 1M" -f 248 https://www.youtube.com/watch?v=xxxxxxxx
+ ```
