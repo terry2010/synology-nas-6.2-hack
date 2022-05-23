@@ -126,7 +126,7 @@ youtube-dl --proxy 192.168.50.181:7890 -f 137 https://www.youtube.com/watch?v=xx
 
 使用aria2 
 ```
- youtube-dl --proxy 192.168.50.181:7890  --external-downloader aria2c --external-downloader-args "--all-proxy=http://192.168.50.181:7890  --file-allocation=prealloc -s 16 -j 16 -x 16 -k 1M" -f 248 https://www.youtube.com/watch?v=xxxxxxxx
+ youtube-dl --proxy 192.168.50.181:7890  --external-downloader aria2c --external-downloader-args "--all-proxy=http://192.168.50.181:7890  --file-allocation=prealloc -s 16 -j 16 -x 16 -k 1M" -f 248+140 https://www.youtube.com/watch?v=xxxxxxxx
  ```
 > aria2在群晖7.1 上下载https 会提示 
 > ```-> [SocketCore.cc:1021] errorCode=1 SSL/TLS handshake failure: unable to get local issuer certificate```
