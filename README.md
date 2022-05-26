@@ -134,6 +134,7 @@ youtube-dl --proxy 192.168.50.181:7890 -f 137 https://www.youtube.com/watch?v=xx
 > 
 > ```opkg install ca-certificates```
 
+
 ### 安装 opkg 
 ```
 mkdir -p /volume1/@Entware/opt
@@ -165,5 +166,15 @@ fi
 
 # Update Entware List
 /opt/bin/opkg update
+```
+
+### ffmpeg 支持 aac
+```
+opkg install ffmpeg
+```
+
+### ffmpeg 转码，剪切
+```
+ ffmpeg -i av.mp4 -i av.m4a -c copy output.mp4
 ```
 
